@@ -1,23 +1,40 @@
-pipeline 
-{
-    agent any
-	
-	  stages
-	    {
-		
-		   stage('print hi')
-		   {
-		     steps {
-			          sh 'echo hi'
-					  
-			 
-			        }
-		   
-		   }
-		
-		}
-	
-	
-	}
+pipeline{
 
-
+     agent any
+	 
+	     stages
+		 
+		 {
+		  stage ('print git clone')
+		  
+		  {
+		  
+		  steps('print clone')
+		  {
+		  sh 'echo git clone'
+		  
+		  }
+		  }
+		  
+		  stage ('print test cases ')
+		  
+		  {
+		  
+		  steps('print test cases')
+		  {
+		  sh 'echo test cases'
+		  
+		  }
+		  }
+		   stage ('print build job')
+		  
+		  {
+		  
+		  steps('print build job')
+		  {
+		  sh 'echo git build job'
+		  
+		  }
+		  }
+		  }
+		  }
